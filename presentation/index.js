@@ -36,8 +36,8 @@ require("normalize.css");
 require("spectacle/lib/themes/default/index.css");
 
 const images = {
-	city: require("../assets/city.jpg"),
-	kat: require("../assets/kat.png"),
+	twitter: require("../assets/city.jpg"),
+	email: require("../assets/kat.png"),
 	logo: require("../assets/formidable-logo.svg"),
 	markdown: require("../assets/markdown.png")
 };
@@ -64,31 +64,45 @@ export default class Presentation extends React.Component {
 							Who am I to talk?
 						</Heading>
 						<div>
-							<Image src={images.twitter} />
-							<Text>@GregHardin137</Text>
+							<Image src={images.twitter} width="64" height="64" />
+							<Text textColor="primary" textFont="primary">@GregHardin137</Text>
 						</div>
 						<div>
-							<Image src={images.email} />
-							<Text>greg@virtuallite.com</Text>
+							<Image src={images.email} width="64" height="64" />
+							<Text textColor="primary" textFont="primary">greg@virtuallite.com</Text>
 						</div>
 					</Slide>
 					<Slide transition={["slide"]} bgColor="primary" notes="">
 						<Heading size={1} fit>
 							What you should probably already know
 						</Heading>
+						<List>
+							<Appear>
+								<ListItem>JavaScript</ListItem>
+							</Appear>
+							<Appear>
+								<ListItem>React</ListItem>
+							</Appear>
+							<Appear>
+								<ListItem>Redux?</ListItem>
+							</Appear>
+							<Appear>
+								<ListItem>GraphQL?</ListItem>
+							</Appear>
+						</List>
 					</Slide>
 					<Slide transition={["zoom", "fade"]} bgColor="primary" notes="">
 						<Heading size={1} fit>
 							What is Apollo anyway?
 						</Heading>
 					</Slide>
-					<Slide transition={["slide"]} bgImage={images.city.replace("/", "")} bgDarken={0.75}>
+					<Slide transition={["slide"]}>
 						<Heading>
 							GraphQL?
 						</Heading>
 					</Slide>
 					<Slide transition={["zoom", "fade"]} bgColor="primary">
-						<Heading size={1} fit>
+						<Heading size={1}>
 							Queries
 						</Heading>
 						<CodePane>
@@ -96,7 +110,7 @@ export default class Presentation extends React.Component {
 						</CodePane>
 					</Slide>
 					<Slide transition={["slide"]} bgColor="black">
-						<Heading size={1} fit>
+						<Heading size={1}>
 							Mutations
 						</Heading>
 						<CodePane>
@@ -109,11 +123,11 @@ export default class Presentation extends React.Component {
 						</Heading>
 					</Slide>
 					<Slide transition={["slide", "spin"]} bgColor="primary">
-						<Heading caps size={1}>
+						<Heading caps size={2}>
 							How is this different from Relay?
 						</Heading>
 						<List>
-							<ListItem>alskdfjlasjdf</ListItem>
+							<ListItem>asdfas</ListItem>
 						</List>
 					</Slide>
 					<Slide transition={["fade"]} bgColor="secondary" textColor="primary">
@@ -126,12 +140,12 @@ export default class Presentation extends React.Component {
 							Made with love in Seattle by
 						</Heading>
 						<div>
-							<Image src={images.twitter} />
-							<Text>@GregHardin137</Text>
+							<Image src={images.twitter} width="64" height="64" />
+							<Text textColor="primary" textFont="primary">@GregHardin137</Text>
 						</div>
 						<div>
-							<Image src={images.email} />
-							<Text>greg@virtuallite.com</Text>
+							<Image src={images.email} width="64" height="64" />
+							<Text textColor="primary" textFont="primary">greg@virtuallite.com</Text>
 						</div>
 					</Slide>
 				</Deck>
