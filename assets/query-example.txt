@@ -1,0 +1,31 @@
+query BookQuery {
+    viewer {
+        allBooks {
+            edges {
+                node {
+                    id,
+                    title,
+                    author {
+                        id,
+                        firstName,
+                        lastName,
+                        suffix
+                    },
+                    currentHolder {
+                        id
+                    },
+                    bookRequests(where: { complete: { ne:true } }, orderBy:{ field: createdAt, direction: DESC }) {
+                        edges {
+                            node {
+                                createdAt
+                                requestedBy {
+                                    id,
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

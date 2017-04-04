@@ -1,0 +1,11 @@
+mutation RequestBook($input: CreateBookRequestInput!) {
+	createBookRequest(input: $input) {
+		changedBookRequest {
+			id,
+			createdAt,
+			requestedBy {
+				id
+			}
+		}
+	}
+}

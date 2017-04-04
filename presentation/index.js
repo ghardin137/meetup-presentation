@@ -28,29 +28,64 @@ import preloader from "spectacle/lib/utils/preloader";
 // Import theme
 import createTheme from "spectacle/lib/themes/default";
 
-// Import custom component
-import Interactive from "../assets/interactive";
-
 // Require CSS
 require("normalize.css");
 require("spectacle/lib/themes/default/index.css");
 
 const images = {
-	twitter: require("../assets/city.jpg"),
-	email: require("../assets/kat.png"),
-	logo: require("../assets/formidable-logo.svg"),
-	markdown: require("../assets/markdown.png")
+	apollo13: require('../assets/apollo13.jpg')
 };
 
 preloader(images);
 
-const theme = createTheme({primary: "#ff4081"});
+const theme = createTheme({primary: "#0055FF"});
 
 export default class Presentation extends React.Component {
 	render() {
 		return (
 			<Spectacle theme={theme}>
 				<Deck transition={["zoom", "slide"]} transitionDuration={500}>
+					<Slide transition={["zoom"]} bgColor="primary">
+						<Heading size={1} fit caps lineHeight={1} textColor="black">
+							Apollo 13
+						</Heading>
+						<Heading size={1} fit caps>
+							Ron Howard's Greatest Achievement?
+						</Heading>
+					</Slide>
+					<Slide transition={["slide"]} bgColor="black">
+						<Image src={images.apollo13.replace("/", "")} margin="0px auto" height="auto" width="100%"/>
+					</Slide>
+					<Slide transition={["slide"]} bgColor="black">
+						<BlockQuote>
+							<Quote>Even if you know how it all turned out (and you should), this amazing journey is harrowing and exhilarating.</Quote>
+							<Cite>Joe Brown</Cite>
+						</BlockQuote>
+					</Slide>
+					<Slide transition={["slide"]} bgColor="black">
+						<BlockQuote>
+							<Quote>Apollo 13 remains Howard's masterpiece... It is, quite simply, one of the finest movies ever produced.</Quote>
+							<Cite>David Cornelius</Cite>
+						</BlockQuote>
+					</Slide>
+					<Slide transition={["slide"]} bgColor="black">
+						<BlockQuote>
+							<Quote>Tense as the best murder mysteries and as kinetic as the most exciting action films, this space adventure is as thrilling as movies get.</Quote>
+							<Cite>Ralph Novak</Cite>
+						</BlockQuote>
+					</Slide>
+					<Slide transition={["slide"]} bgColor="black">
+						<BlockQuote>
+							<Quote>I wasn't in that movie dumb ass.</Quote>
+							<Cite>Bruce Willis</Cite>
+						</BlockQuote>
+					</Slide>
+					<Slide transition={["slide"]} bgColor="black">
+						
+					</Slide>
+					<Slide transition={["slide"]} bgColor="black">
+						<Heading fit caps textColor="primary">um...</Heading>
+					</Slide>
 					<Slide transition={["zoom"]} bgColor="primary">
 						<Heading size={1} fit caps lineHeight={1} textColor="black">
 							Apollo
@@ -84,10 +119,10 @@ export default class Presentation extends React.Component {
 								<ListItem>React</ListItem>
 							</Appear>
 							<Appear>
-								<ListItem>Redux?</ListItem>
+								<ListItem>GraphQL? (probably)</ListItem>
 							</Appear>
 							<Appear>
-								<ListItem>GraphQL?</ListItem>
+								<ListItem>Redux (maybe?)</ListItem>
 							</Appear>
 						</List>
 					</Slide>
@@ -101,21 +136,25 @@ export default class Presentation extends React.Component {
 							GraphQL?
 						</Heading>
 					</Slide>
-					<Slide transition={["zoom", "fade"]} bgColor="primary">
-						<Heading size={1}>
+					<Slide transition={["zoom", "fade"]} bgColor="primary" maxHeight="auto">
+						<Heading size={2}>
 							Queries
 						</Heading>
-						<CodePane>
-							show a query here.
-						</CodePane>
+						<CodePane
+							lang="graphql"
+							source={require("raw-loader!../assets/query-example.txt")}
+							margin="20px auto"
+							/>
 					</Slide>
-					<Slide transition={["slide"]} bgColor="black">
-						<Heading size={1}>
+					<Slide transition={["slide"]} bgColor="primary" maxHeight="auto">
+						<Heading size={2}>
 							Mutations
 						</Heading>
-						<CodePane>
-							show a mutation here.
-						</CodePane>
+						<CodePane
+							lang="graphql"
+							source={require("raw-loader!../assets/mutation-example.txt")}
+							margin="20px auto"
+							/>
 					</Slide>
 					<Slide transition={["spin", "zoom"]} bgColor="tertiary" notes="Show some code after this one.">
 						<Heading caps size={1} textColor="primary">
