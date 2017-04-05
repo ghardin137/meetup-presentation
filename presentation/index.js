@@ -101,12 +101,12 @@ export default class Presentation extends React.Component {
 							Who am I to talk?
 						</Heading>
 						<div>
-							<Image src={images.twitter} width="64" height="64" />
+							<Image src={images.twitter} width={64} height={64} />
 							<Text textColor="primary" textFont="primary">@GregHardin137</Text>
 						</div>
 						<div>
-							<Image src={images.email} width="64" height="64" />
-							<Text textColor="primary" textFont="primary">greg@virtuallite.com</Text>
+							<Image src={images.email} width={64} height={64} />
+							<Text textColor="primary" textFont="primary">greg@icebrg.io</Text>
 						</div>
 					</Slide>
 					<Slide transition={["slide"]} bgColor="primary" notes="">
@@ -209,6 +209,17 @@ export default class Presentation extends React.Component {
 					</Slide>
 					<Slide transition={["fade"]} bgColor="secondary" textColor="primary">
 						<Heading caps size={1}>
+							Why did I pick Apollo?
+						</Heading>
+						<List>
+							<ListItem>Less Boilerplate</ListItem>
+							<ListItem>Ability to run multiple named queries in the same space</ListItem>
+							<ListItem>Ability to separate queries from mutations</ListItem>
+							<ListItem>Already integrated with Redux</ListItem>
+						</List>
+					</Slide>
+					<Slide transition={["fade"]} bgColor="secondary" textColor="primary">
+						<Heading caps size={1}>
 							Questions?
 						</Heading>
 					</Slide>
@@ -217,12 +228,12 @@ export default class Presentation extends React.Component {
 							Made with love in Seattle by
 						</Heading>
 						<div>
-							<Image src={images.twitter} width="64" height="64" />
+							<Image src={images.twitter} width={64} height={64} />
 							<Text textColor="primary" textFont="primary">@GregHardin137</Text>
 						</div>
 						<div>
-							<Image src={images.email} width="64" height="64" />
-							<Text textColor="primary" textFont="primary">greg@virtuallite.com</Text>
+							<Image src={images.email} width={64} height={64} />
+							<Text textColor="primary" textFont="primary">greg@icebrg.io</Text>
 						</div>
 					</Slide>
 				</Deck>
