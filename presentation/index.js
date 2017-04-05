@@ -33,7 +33,9 @@ require("normalize.css");
 require("spectacle/lib/themes/default/index.css");
 
 const images = {
-	apollo13: require('../assets/apollo13.jpg')
+	apollo13: require('../assets/apollo13.jpg'),
+	twitter: require('../assets/twitter-128.png'),
+	email: require('../assets/servlet.png')
 };
 
 preloader(images);
@@ -126,7 +128,7 @@ export default class Presentation extends React.Component {
 							</Appear>
 						</List>
 					</Slide>
-					<Slide transition={["zoom", "fade"]} bgColor="primary" notes="">
+					<Slide transition={["slide"]} bgColor="primary" notes="">
 						<Heading size={1} fit>
 							What is Apollo anyway?
 						</Heading>
@@ -136,7 +138,7 @@ export default class Presentation extends React.Component {
 							GraphQL?
 						</Heading>
 					</Slide>
-					<Slide transition={["zoom", "fade"]} bgColor="primary" maxHeight="auto">
+					<Slide transition={["slide"]} bgColor="primary">
 						<Heading size={2}>
 							Queries
 						</Heading>
@@ -146,7 +148,7 @@ export default class Presentation extends React.Component {
 							margin="20px auto"
 							/>
 					</Slide>
-					<Slide transition={["slide"]} bgColor="primary" maxHeight="auto">
+					<Slide transition={["slide"]} bgColor="primary">
 						<Heading size={2}>
 							Mutations
 						</Heading>
@@ -156,17 +158,53 @@ export default class Presentation extends React.Component {
 							margin="20px auto"
 							/>
 					</Slide>
-					<Slide transition={["spin", "zoom"]} bgColor="tertiary" notes="Show some code after this one.">
+					<Slide transition={["slide"]} bgColor="primary">
+						<Heading size={2} margin>
+							How does it work?
+						</Heading>
+						<Appear>
+							<Heading size={4}>Higher Order Component</Heading>
+						</Appear>
+						<Appear>
+							<Text>graphql()</Text>
+						</Appear>
+					</Slide>
+					<Slide transition={["slide"]} bgColor="tertiary" notes="Show some code after this one.">
 						<Heading caps size={1} textColor="primary">
 							Sounds good. How do I get started?
 						</Heading>
 					</Slide>
-					<Slide transition={["slide", "spin"]} bgColor="primary">
+					<Slide transition={["slide"]} bgColor="primary">
 						<Heading caps size={2}>
 							How is this different from Relay?
 						</Heading>
+					</Slide>
+					<Slide transition={["slide"]} bgColor="primary">
+						<Heading caps size={2}>
+							Root Container
+						</Heading>
 						<List>
-							<ListItem>asdfas</ListItem>
+							<ListItem>One per application</ListItem>
+							<ListItem>Renders root level component</ListItem>
+							<ListItem>Specifies the base level query</ListItem>
+						</List>
+					</Slide>
+					<Slide transition={["slide"]} bgColor="primary">
+						<Heading caps size={2}>
+							Routes
+						</Heading>
+						<List>
+							<ListItem>Base query you want to run</ListItem>
+							<ListItem>Can pull in fragments from other components</ListItem>
+						</List>
+					</Slide>
+					<Slide transition={["slide"]} bgColor="primary">
+						<Heading caps size={2}>
+							Fragments
+						</Heading>
+						<List>
+							<ListItem>Can be further broken down into more fragments</ListItem>
+							<ListItem>Can be a query or mutation</ListItem>
 						</List>
 					</Slide>
 					<Slide transition={["fade"]} bgColor="secondary" textColor="primary">
@@ -174,7 +212,7 @@ export default class Presentation extends React.Component {
 							Questions?
 						</Heading>
 					</Slide>
-					<Slide transition={["spin", "slide"]} bgColor="tertiary">
+					<Slide transition={["fade"]} bgColor="tertiary">
 						<Heading size={1} caps fit lineHeight={1.5} textColor="primary">
 							Made with love in Seattle by
 						</Heading>
