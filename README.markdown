@@ -22,6 +22,8 @@ And finally we'll talk about Facebook's Relay library and why I prefer Apollo to
 ## Demo Project
 Repo: https://github.com/ghardin137/lbry
 
+It's not pretty and no one should actually USE it, but it's got some examples as to how you can use apollo.
+
 ## Kudos
 Formidable Labs - Creators of Spectable presentation framework
 Scaphold.io - GraphQL Server as a service provider.  Powers 
