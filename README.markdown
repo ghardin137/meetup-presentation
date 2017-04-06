@@ -1,21 +1,27 @@
-# Spectacle Boilerplate
+# Seattle React.js Meetup Presentation - Apollo
+This is my presentation about the GraphQL integration library, Apollo.
 
-## Reference
+I'll go into some detail about what GraphQL is and does, but you should probably have some basic idea of what it does and how it works before starting to work with any integration library.
 
-The Spectacle core API is available at [https://github.com/FormidableLabs/spectacle/blob/master/README.markdown](https://github.com/FormidableLabs/spectacle/blob/master/README.markdown).
+You should DEFINITELY know what React is and have a basic idea of how it's structured.
 
-## Development
+Knowing a little bit about Redux would probably help as well, but isn't strictly necessary.
 
-After downloading the boilerplate, your first order of business is to open terminal and run `npm install`
+Then we'll talk about what Apollo does and doesn't do and talk at a high level how it actually works.
 
-Next, run `rm -R .git` to remove the existing version control.
+And then everybody's favorite part, looking at actual code.
 
-Then, to start up the local server, run `npm start`
+And finally we'll talk about Facebook's Relay library and why I prefer Apollo to it.
 
-Open a browser and hit [http://localhost:3000](http://localhost:3000), and we are ready to roll
+## Installation
+- clone `https://github.com/ghardin137/meetup-presentation`
+- `cd meetup-presentation`
+- run `npm install && npm start`
+- browse to `http://localhost:3000`
 
-## Build & Deployment
+## Demo Project
+Repo: https://github.com/ghardin137/lbry
 
-Building the dist version of the project is as easy as running `npm run build`
-
-If you want to deploy the slideshow to surge, run `npm run deploy`
+## Kudos
+Formidable Labs - Creators of Spectable presentation framework
+Scaphold.io - GraphQL Server as a service provider.  Powers 
