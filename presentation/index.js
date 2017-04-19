@@ -58,36 +58,6 @@ export default class Presentation extends React.Component {
 					<Slide transition={["slide"]} bgColor="black">
 						<Image src={images.apollo13.replace("/", "")} margin="0px auto" height="auto" width="100%"/>
 					</Slide>
-					<Slide transition={["slide"]} bgColor="black">
-						<BlockQuote>
-							<Quote>Even if you know how it all turned out (and you should), this amazing journey is harrowing and exhilarating.</Quote>
-							<Cite>Joe Brown</Cite>
-						</BlockQuote>
-					</Slide>
-					<Slide transition={["slide"]} bgColor="black">
-						<BlockQuote>
-							<Quote>Apollo 13 remains Howard's masterpiece... It is, quite simply, one of the finest movies ever produced.</Quote>
-							<Cite>David Cornelius</Cite>
-						</BlockQuote>
-					</Slide>
-					<Slide transition={["slide"]} bgColor="black">
-						<BlockQuote>
-							<Quote>Tense as the best murder mysteries and as kinetic as the most exciting action films, this space adventure is as thrilling as movies get.</Quote>
-							<Cite>Ralph Novak</Cite>
-						</BlockQuote>
-					</Slide>
-					<Slide transition={["slide"]} bgColor="black">
-						<BlockQuote>
-							<Quote>I wasn't in that movie dumb ass.</Quote>
-							<Cite>Bruce Willis</Cite>
-						</BlockQuote>
-					</Slide>
-					<Slide transition={["slide"]} bgColor="black">
-						
-					</Slide>
-					<Slide transition={["slide"]} bgColor="black">
-						<Heading fit caps textColor="primary">um...</Heading>
-					</Slide>
 					<Slide transition={["zoom"]} bgColor="primary">
 						<Heading size={1} fit caps lineHeight={1} textColor="black">
 							Apollo
